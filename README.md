@@ -47,7 +47,7 @@ GitHub に慣れていない方は，[GitHub Releaseから最新版のzipファ�
 3. zip 展開したファイルおよびフォルダーをアップロード．
 4. Files で表示したいファイル（例えば sample.typ など）の![image](https://github.com/user-attachments/assets/bf5dc1c8-78c4-4bb9-9d78-b8ea93271236)アイコンをクリック．
 
-### 他のエディターで執筆する場合
+### その他のエディターを使用する場合
 
 筆者は試せていませんが，他のエディターでも同様の拡張機能はありそうです．  
 また，コンパイルは Command Line Interface (CLI) でも行えます．  

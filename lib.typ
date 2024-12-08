@@ -6,13 +6,12 @@
 #let mincho = ("BIZ UDPMincho", "MS PMincho", "Hiragino Mincho Pro", "IPAexMincho", "Noto Serif CJK JP")
 #let english = ("Times New Roman", "New Computer Modern")
 
-#let rengo(
-  title: [タイトル],
-  authors: [著者],
+#let sci-conf(
+  title: [],
+  authors: [],
   etitle: "", 
   eauthors: "",
   abstract: none,
-  keywords: (),
   bibliography: none,
   body
 ) = {
@@ -22,9 +21,9 @@
   // Configure the page.
   set page(
     paper: "a4",
-    margin: (top: 20mm, bottom: 27mm, x: 20mm)
+    margin: (top: 2.5cm, bottom: 3cm, x: 1.8cm)
   )
-  set text(size: 10pt, font: mincho)
+  set text(size: 10.5pt, font: mincho)
   // show regex("[0-9a-zA-Z]"): set text(font: "New Computer Modern Math")
   set par(leading: 0.55em, first-line-indent: 1em, justify: true, spacing: 0.55em)
 
@@ -45,10 +44,6 @@
       it
     }
   }
-
-  // Configure lists.
-  set enum(indent: 10pt, body-indent: 9pt)
-  set list(indent: 10pt, body-indent: 9pt)
 
   // Configure headings.
   set heading(numbering: "1.")
@@ -94,32 +89,30 @@
   show figure.where(kind: image): set figure.caption(position: bottom, separator: [: ])
 
   // Display the paper's title.
-  align(center, text(16pt, title, weight: "bold", font: gothic))
+  align(center, text(14pt, title, weight: "bold", font: gothic))
   v(16pt, weak: true)
 
-  // Display the authors list.
-  align(center, text(12pt, authors, font: mincho))
-  v(1.5em, weak: true)
-
   // Display the paper's title in English.
-  align(center, text(12pt, etitle, weight: "bold", font: english))
-  v(1.5em, weak: true)
+  align(center, text(14pt, etitle, weight: "bold", font: english))
+  v(1em, weak: true)
+
+  // Display the authors list.
+  align(center, text(10.5pt, authors, weight: "bold", font: gothic))
+  v(1em, weak: true)
 
   // Display the authors list in English.
-  align(center, text(12pt, eauthors, font: english))
-  v(1.5em, weak: true)
+  align(center, text(10.5pt, eauthors, weight: "bold", font: english))
+  v(1em, weak: true)
 
   // Display abstract and index terms.
   if abstract != none {
     grid(
-      columns: (0.7cm, 1fr, 0.7cm),
+      columns: (1cm, 1fr, 1cm),
       [],
       [
-        #set text(10pt, font: english)
+        #set text(10.5pt, font: english)
         #set par(first-line-indent: 0pt)
-        *Abstract:* #h(0.5em) #abstract
-        #v(1em)
-        *Keywords:* #keywords.join(", ")
+        *Abstract* #h(1em) #abstract
       ],
       []
     )
@@ -127,7 +120,7 @@
   }
 
   // Start two column mode and configure paragraph properties.
-  show: columns.with(2, gutter: 8mm)
+  show: columns.with(2)
 
   // Display the paper's contents.
   body
@@ -136,7 +129,7 @@
   if bibliography != none {
     show std-bibliography: set text(9pt)
     show regex("[0-9a-zA-Z]"): set text(font: english)
-    set std-bibliography(title: text(12pt)[参考文献], style: "rengo.csl")
+    set std-bibliography(title: text(12pt)[参考文献], style: "sci.csl")
     bibliography
   }
 }

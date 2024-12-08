@@ -8,20 +8,16 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    env:
-      TYPST_FILE_NAME: main
-
     steps:
       - uses: actions/checkout@v4
-      - name: Install fonts
+      - name: Make zip file
         run: |
-          sudo apt-get update
-          sudo apt-get install -y fonts-noto fonts-noto-cjk fonts-noto-cjk-extra
-      - uses: typst-community/setup-typst@v3
-      - run: typst compile ${{ env.TYPST_FILE_NAME }}.typ
+          mkdir -p typst-sci/figs
+          cp -r --parents sample.typ main.typ README.md LICENSE sci.csl refs.bib refs.yml .vscode figs typst-sci
+          zip -r typst-sci.zip typst-sci
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: ${{ env.TYPST_FILE_NAME }}.pdf
+          files: typst-sci.zip
           draft: true
           generate_release_notes: true

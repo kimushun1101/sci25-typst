@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only">
   <info>
-    <title>Automatic control rengo</title>
-    <id>http://www.zotero.org/styles/ac-rengo</id>
-    <link href="http://www.zotero.org/styles/ac-rengo" rel="self"/>
+    <title>Annual Conference of the Institute of Systems, Control and Information Engineers</title>
+    <id>http://www.zotero.org/styles/ac-sci</id>
+    <link href="http://www.zotero.org/styles/ac-sci" rel="self"/>
     <link href="https://rengo66.sice.jp/manuscript/" rel="documentation"/>
     <author>
       <name>Shunsuke Kimura</name>
@@ -144,8 +144,8 @@
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout prefix="" suffix="" delimiter=", ">
-      <text variable="citation-number" prefix="[" suffix="]" />
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number" prefix="" suffix="" />
     </layout>
   </citation>
   <bibliography entry-spacing="0" second-field-align="flush">

@@ -1,79 +1,79 @@
 # 英文学術論文誌
-kimura2015asymptotic:
+internationaljournal:
     type: Article
-    title: Asymptotic stabilization of two-wheeled mobile robot via locally semiconcave generalized homogeneous control Lyapunov function
-    author: ["Kimura, Shunsuke", "Nakamura, Hisakazu", "Yamashita, Yuh"]
-    page-range: 122–130
-    date: 2015
+    title: English Journal title
+    author: ["First, Author", "Second, Chosya", "Third, Sci"]
+    page-range: 123–130
+    date: 2000
     parent:
         type: Periodical
-        title: SICE Journal of Control, Measurement, and System Integration
-        volume: 5
-        issue: 2
-        publisher: Taylor & Francis
+        title: Magazine title
+        volume: 99
+        issue: 1
+        publisher: SCI publisher
 
 # 和文学術論文誌
-kimura2017state:
+japanesejournal:
     language: japanese
     type: Article
-    title: 状態制約を有する非線形システムに対する状態方程式を保持する変換—システム蘇生変換—
-    author: ["木村, 駿介", "中村, 文一", "伊吹, 竜也", "三平, 満司"]
+    title: 日本語論文名
+    author: ["第一, 著者", "第2, 著者", "第３著者, 氏名"]
     page-range: 337–345
-    date: 2017
+    date: 2010
     parent:
         type: Periodical
-        title: 計測自動制御学会論文集
-        volume: 53
-        issue: 6
-        publisher: 公益社団法人 計測自動制御学会
+        title: システム制御情報学会論文誌
+        volume: 999
+        issue: 2
+        publisher: 一般社団法人 システム制御情報学会
 
 # 国際会議論文
-kimura2021control:
+internationalconference:
     type: Article
-    author:  ["Kimura, Shunsuke", "Naito,  Kakuya"]
-    title: Control barrier function based assist control with shifting sensor and footprint positions
-    date: 2021
-    # page-range: 1-6
+    author: ["First, Author", "Second, Chosya", "Third, Sci"]
+    title: Conference article title
+    date: 2020
+    page-range: 1-6
     parent:
         - type: Proceedings
-          title: IECON2021 - 47th annual conference of the IEEE industrial electronics society
+          title: Conference Name
 
 # 国内学会
-kimura2020facility:
+japaneseconference:
     language: japanese
     type: Article
-    author:  ["木村, 駿介"]
-    title: 施設管理システムと自律移動ロボットとの連携実証試験
-    date: 2020
-    # page-range: 2A1–A03
+    author: ["第一, 著者", "第2, 著者", "第３著者, 氏名"]
+    title: 予稿論文名
+    date: 2030
+    page-range: 9989–9999
     parent:
         - type: Proceedings
-          title: ロボティクス・メカトロニクス講演会講演概要集
+          title: 第xx回システム制御情報学会研究発表講演会
 
 # 英文書籍
-khalil2002control:
+englishbook:
     type: Book
-    title: Control of nonlinear systems, Global Edition
-    author: Khalil, Hassan K
+    title: English book title
+    author: First, Author
     page-range: 1-400
-    publisher: Pearson Education
-    date: 2002
+    publisher: Book publisher
+    date: 2040
 
 # 和文書籍
-sugie1999feedback:
+japanesebook:
     language: japanese
     type: Book
-    title: フィードバック制御入門
-    author: ["杉江, 俊治", "藤田, 政之"]
+    title: 日本語の書籍名
+    author: ["第一, 著者", "第2, 著者"]
     page-range: 1-223
-    publisher: コロナ社
-    date: 1999
+    publisher: 出版社名
+    date: 2050
 
 # Web サイト
-shimz2022visually:
+sci25webpage:
     type: Web
-    title: 視覚障がい者移動支援ロボット「AIスーツケース」
-    publisher: 清水建設株式会社
+    title: 第69回 システム制御情報学会 研究発表講演会
+    publisher: 一般社団法人 システム制御情報学会
     url:
-        value: https://www.shimz.co.jp/solution/tech374/index.html
-        date: 2024-03-30
+        value: https://sci25.iscie.or.jp
+        date: 2024-12-08

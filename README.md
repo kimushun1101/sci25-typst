@@ -31,7 +31,7 @@ Typst の概要については [Typstで執筆するには](https://typst-jp.git
 GitHub に慣れていない方は，[GitHub Releaseから最新版のzipファイル](https://github.com/kimushun1101/sci25-typst/releases/latest/download/typst-sci.zip)をダウンロードして展開してください．  
 慣れている方は，`git clone` したり `use this template` したり，適宜扱ってください．
 
-### VS Code を使用する場合
+### VS Code の場合
 1. [VS Code](https://code.visualstudio.com/) をインストール．
 2. VS Code で `File`→`Open Folder` で zip 展開したフォルダーを開く．  
 3. 推奨拡張機能をインストール．  
@@ -41,13 +41,13 @@ GitHub に慣れていない方は，[GitHub Releaseから最新版のzipファ�
  `Ctrl` + `K` のあと `V`) でプレビューを表示．[トップにある動画](#sci25-typst) の操作です．
 5. `Ctrl` + `S` で PDF を生成．
 
-### Typst app を使用する場合
+### Typst app の場合
 1. [Typst app](https://typst.app/)から `Sign up` でアカウントを作成．
 2. `Empty document` から新規プロジェクトを作成．
 3. zip 展開したファイルおよびフォルダーをアップロード．
 4. Files で表示したいファイル（例えば sample.typ など）の![image](https://github.com/user-attachments/assets/bf5dc1c8-78c4-4bb9-9d78-b8ea93271236)アイコンをクリック．
 
-### その他のエディターを使用する場合
+### その他のエディターの場合
 
 筆者は試せていませんが，他のエディターでも同様の拡張機能はありそうです．  
 また，コンパイルは Command Line Interface (CLI) でも行えます．  

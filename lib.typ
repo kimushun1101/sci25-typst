@@ -1,6 +1,7 @@
 // Set the Fonts
 #let gothic = ("BIZ UDPGothic", "MS PGothic", "Hiragino Kaku Gothic Pro", "IPAexGothic", "Noto Sans CJK JP")
 #let mincho = ("BIZ UDPMincho", "MS PMincho", "Hiragino Mincho Pro", "IPAexMincho", "Noto Serif CJK JP")
+#let english = ("Times New Roman", "New Computer Modern")
 
 // example 1: Windows
 // #let gothic = ("MS PGothic")

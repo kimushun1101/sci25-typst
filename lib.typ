@@ -1,13 +1,21 @@
 // Set the Fonts
 #let gothic = ("BIZ UDPGothic", "MS PGothic", "Hiragino Kaku Gothic Pro", "IPAexGothic", "Noto Sans CJK JP")
 #let mincho = ("BIZ UDPMincho", "MS PMincho", "Hiragino Mincho Pro", "IPAexMincho", "Noto Serif CJK JP")
+
 // example 1: Windows
 // #let gothic = ("MS PGothic")
 // #let mincho = ("MS PMincho")
+// #let english = ("Times New Roman")
+
 // example 2: Mac OS
 // #let gothic = ("Hiragino Kaku Gothic Pro")
 // #let mincho = ("Hiragino Mincho Pro")
-#let english = ("Times New Roman", "New Computer Modern")
+// #let english = ("Times New Roman")
+
+// example 3: Linux or Typst app
+// #let gothic = ("Noto Sans CJK JP")
+// #let mincho = ("Noto Serif CJK JP")
+// #let english = ("New Computer Modern")
 
 // Workaround for the lack of an `std` scope.
 #let std-bibliography = bibliography

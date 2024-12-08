@@ -49,7 +49,7 @@ GitHub に慣れていない方は，[GitHub Releaseから最新版のzipファ�
 
 ### その他のエディターの場合
 
-筆者は試せていませんが，他のエディターでも同様の拡張機能はありそうです．  
+他のエディターでも VS Code と同様の拡張機能があるかもしれません．  
 また，コンパイルは Command Line Interface (CLI) でも行えます．  
 1. Typst CLI をインストールする．
   - Windows

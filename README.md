@@ -42,10 +42,10 @@ GitHub に慣れていない方は，[GitHub Releaseから最新版のzipファ�
 5. `Ctrl` + `S` で PDF を生成．
 
 ### Typst app を使用する場合
-1. [Typst app](https://typst.app/)から `Sign up` でアカウント作成する．
-2. `Empty document` から新規プロジェクトを作成する．
-3. zip 展開したファイルおよびフォルダーをアップロードする．
-4. 
+1. [Typst app](https://typst.app/)から `Sign up` でアカウントを作成．
+2. `Empty document` から新規プロジェクトを作成．
+3. zip 展開したファイルおよびフォルダーをアップロード．
+4. Files で表示したいファイル（例えば sample.typ など）の![image](https://github.com/user-attachments/assets/bf5dc1c8-78c4-4bb9-9d78-b8ea93271236)アイコンをクリック．
 
 ### 他のエディターで執筆する場合
 
@@ -53,19 +53,20 @@ GitHub に慣れていない方は，[GitHub Releaseから最新版のzipファ�
 また，コンパイルは Command Line Interface (CLI) でも行えます．  
 1. Typst CLI をインストールする．
   - Windows
-    PowerShell を開き以下のコマンドを入力する．
+    PowerShell を開き以下のコマンドを入力．
     ```powershell
     winget install --id Typst.Typst
     ```
     `winget` コマンドが有効でない場合には，Microsoft Store から [アプリインストーラー](https://apps.microsoft.com/detail/9nblggh4nns1) をインストールすると使えるようになります．
   - Mac
-    [Homebrew](https://brew.sh/ja/) を導入して，以下のコマンドを入力する．
+    [Homebrew](https://brew.sh/ja/) を導入して，以下のコマンドを入力．
     ```sh
     brew install typst
-    ```
+    ```![Screenshot from 2024-12-09 01-34-48](https://github.com/user-attachments/assets/4a0cd908-b170-4004-91fe-faf3c003c8f1)
+
   - Rust を通してインストール
     Ubuntu の場合などはこの方法をオススメします．
-    [Rust](https://www.rust-lang.org/ja/tools/install) をインストールして，以下のコマンドを入力する．
+    [Rust](https://www.rust-lang.org/ja/tools/install) をインストールして，以下のコマンドを入力．
     ```sh
     cargo install --locked typst-cli
     ```

@@ -27,8 +27,8 @@
 
 = はじめに
 
-システム制御情報学会研究発表講演会用のTypstテンプレート`lib.typ`は, Typst v0.12 での編集を想定し，2024年度のSCI24用のテンプレートを元に，2025年度のSCI25用に改良したものです．
-題目，著者名などの書き方の参考例としてお使い下さい．余白や表題，章，本文のスタイルなど一部の書式は設定されていますが，適切に設定されていない書式もあります．
+システム制御情報学会研究発表講演会用のTypstテンプレート`lib.typ`は, Typst v0.12 での編集を想定し，2024年度のSCI24用のWord，LaTeXテンプレートを元に，2025年度のSCI25用に新規作成したものです．
+題目，著者名などの書き方の参考例としてお使い下さい．余白や表題，章，本文のスタイルなど一部の書式は設定されていますが，適切に設定されていない書式もあるかもしれません．
 必要に応じて書式を変更してご利用ください．
 本サンプルは https://github.com/kimushun1101/typst-jp-conf-template を元に作成されており，
 この原稿のソースコードは https://github.com/kimushun1101/sci25-typst で公開しております．
@@ -37,6 +37,7 @@ Typst の概要についてお知りになりたい方は，https://github.com/k
 テンプレートファイルは以下の２つの方法で実行できることを確認しています．
 README.md に従い，コンパイルできる環境を用意してください．
 + VS Code とその拡張機能を使う．
++ Typst app にアップロードする．
 + CLI (Command Line Interface) でコンパイルする．
 
 = 原稿の体裁
@@ -60,17 +61,27 @@ typst fonts
 // Set the Fonts
 #let gothic = ("BIZ UDPGothic", "MS PGothic", "Hiragino Kaku Gothic Pro", "IPAexGothic", "Noto Sans CJK JP")
 #let mincho = ("BIZ UDPMincho", "MS PMincho", "Hiragino Mincho Pro", "IPAexMincho", "Noto Serif CJK JP")
+#let english = ("Times New Roman", "New Computer Modern")
+
 // example 1: Windows
 // #let gothic = ("MS PGothic")
 // #let mincho = ("MS PMincho")
+// #let english = ("Times New Roman")
+
 // example 2: Mac OS
 // #let gothic = ("Hiragino Kaku Gothic Pro")
 // #let mincho = ("Hiragino Mincho Pro")
+// #let english = ("Times New Roman")
+
+// example 3: Linux or Typst app
+// #let gothic = ("Noto Sans CJK JP")
+// #let mincho = ("Noto Serif CJK JP")
+// #let english = ("New Computer Modern")
 ```
 例えば，2, 3 行目をコメントアウトして，5, 6 行目のコメントアウトを外すなど対応していただいても構いません．
 
 #figure(
-  placement: top,
+  placement: bottom,
   caption: [フォントの設定],
   table(
     columns: 3,
@@ -207,7 +218,7 @@ $ u = K_P e + K_I integral_0^t e d t $ <eq:PI-controller>
 @tab:fonts は以下で記述されております．
 ```typ
 #figure(
-  placement: top,
+  placement: bottom,
   caption: [フォントの設定],
   table(
     columns: 3,

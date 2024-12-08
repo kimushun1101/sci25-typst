@@ -28,12 +28,12 @@ Typst の概要については [Typstで執筆するには](https://typst-jp.git
 
 
 ## 使用方法
-GitHub に慣れていない方は，GitHub ページの `<>Code▼` から `Download ZIP` して展開してください．  
+GitHub に慣れていない方は，[GitHub Releaseから最新版のzipファイル](https://github.com/kimushun1101/sci25-typst/releases/latest/download/typst-sci.zip)をダウンロードして展開してください．  
 慣れている方は，`git clone` したり `use this template` したり，適宜扱ってください．
 
 ### VS Code を使用する場合
 1. [VS Code](https://code.visualstudio.com/) をインストール．
-2. VS Code で `File`→`Open Folder` でこのフォルダーを開く．  
+2. VS Code で `File`→`Open Folder` で zip 展開したフォルダーを開く．  
 3. 推奨拡張機能をインストール．  
   Extensions (`Ctrl` + `Shift` + `X`) の `Search Extensions in Marketplace` のテキストボックスに `@recommended` と入力すると表示される，以下の拡張機能をinstall をクリック．  
     - [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist)
@@ -41,32 +41,35 @@ GitHub に慣れていない方は，GitHub ページの `<>Code▼` から `Dow
  `Ctrl` + `K` のあと `V`) でプレビューを表示．[トップにある動画](#sci25-typst) の操作です．
 5. `Ctrl` + `S` で PDF を生成．
 
+### Typst app を使用する場合
+1. [Typst app](https://typst.app/)から `Sign up` でアカウント作成する．
+2. `Empty document` から新規プロジェクトを作成する．
+3. zip 展開したファイルおよびフォルダーをアップロードする．
+4. 
+
 ### 他のエディターで執筆する場合
 
 筆者は試せていませんが，他のエディターでも同様の拡張機能はありそうです．  
-また，Typst のインストールおよびコンパイルはコマンドラインでも行えます．  
-インストール方法は OS ごとに異なります．
-- Windows
-  PowerShell を開き以下のコマンドを入力する．
-  ```powershell
-  winget install --id Typst.Typst
-  ```
-  `winget` コマンドが有効でない場合には，Microsoft Store から [アプリインストーラー](https://apps.microsoft.com/detail/9nblggh4nns1) をインストールすると使えるようになります．
-- Mac
-  [Homebrew](https://brew.sh/ja/) を導入して，以下のコマンドを入力する．
-  ```sh
-  brew install typst
-  ```
-- Rust を通してインストール
-  Ubuntu の場合などはこの方法をオススメします．
-  [Rust](https://www.rust-lang.org/ja/tools/install) をインストールして，以下のコマンドを入力する．
-  ```sh
-  cargo install --locked typst-cli
-  ```
-
-コマンドによるコンパイル手順は以下のとおりです．
-1. [Typst](https://typst.app/) をインストール．
-2. PowerShell やターミナルで `sample.typ` のあるディレクトリに移り，以下のコマンドで `sample.pdf` を生成．
+また，コンパイルは Command Line Interface (CLI) でも行えます．  
+1. Typst CLI をインストールする．
+  - Windows
+    PowerShell を開き以下のコマンドを入力する．
+    ```powershell
+    winget install --id Typst.Typst
+    ```
+    `winget` コマンドが有効でない場合には，Microsoft Store から [アプリインストーラー](https://apps.microsoft.com/detail/9nblggh4nns1) をインストールすると使えるようになります．
+  - Mac
+    [Homebrew](https://brew.sh/ja/) を導入して，以下のコマンドを入力する．
+    ```sh
+    brew install typst
+    ```
+  - Rust を通してインストール
+    Ubuntu の場合などはこの方法をオススメします．
+    [Rust](https://www.rust-lang.org/ja/tools/install) をインストールして，以下のコマンドを入力する．
+    ```sh
+    cargo install --locked typst-cli
+    ```
+2. PowerShell やターミナルで zip 展開したディレクトリに移り，以下のコマンドで `sample.pdf` を生成．
    ```
    typst compile sample.typ
    ```

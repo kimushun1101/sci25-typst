@@ -4,7 +4,9 @@
 
 # sci25-typst
 
-**このソースコードはTypst version 0.12で作成しました．**  
+> [!NOTE]
+> このソースコードはTypst version 0.12で作成しております．
+
 [第69回 システム制御情報学会 研究発表講演会](https://sci25.iscie.or.jp/)の原稿を Typst で書くときのテンプレートです．  
 コンパイルしたサンプルは [sample.pdf](https://kimushun1101.github.io/sci25-typst/sample.pdf) で確認できます．  
 Typst の概要については [Typstで執筆するには](https://typst-jp.github.io/docs/tutorial/writing-in-typst/) をご覧ください．  

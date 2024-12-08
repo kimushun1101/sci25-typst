@@ -1,5 +1,6 @@
 ![Compile workflow](https://github.com/kimushun1101/sci25-typst/actions/workflows/compile.yml/badge.svg)
 ![Deploy workflow](https://github.com/kimushun1101/sci25-typst/actions/workflows/release.yml/badge.svg)
+![Pages workflow](https://github.com/kimushun1101/sci25-typst/actions/workflows/gh-pages.yml/badge.svg)
 
 # sci25-typst
 

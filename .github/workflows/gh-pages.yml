@@ -1,13 +1,19 @@
-name: Compile sample
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}sample.pdf
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
@@ -20,3 +26,8 @@ jobs:
         run: |
           mkdir ./out
           typst compile ./sample.typ ./out/sample.pdf
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+      - uses: actions/deploy-pages@v4
+        id: deployment

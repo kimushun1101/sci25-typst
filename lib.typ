@@ -1,10 +1,16 @@
-// Workaround for the lack of an `std` scope.
-#let std-bibliography = bibliography
-
 // Set the Fonts
 #let gothic = ("BIZ UDPGothic", "MS PGothic", "Hiragino Kaku Gothic Pro", "IPAexGothic", "Noto Sans CJK JP")
 #let mincho = ("BIZ UDPMincho", "MS PMincho", "Hiragino Mincho Pro", "IPAexMincho", "Noto Serif CJK JP")
+// example 1: Windows
+// #let gothic = ("MS PGothic")
+// #let mincho = ("MS PMincho")
+// example 2: Mac OS
+// #let gothic = ("Hiragino Kaku Gothic Pro")
+// #let mincho = ("Hiragino Mincho Pro")
 #let english = ("Times New Roman", "New Computer Modern")
+
+// Workaround for the lack of an `std` scope.
+#let std-bibliography = bibliography
 
 #let sci-conf(
   title: [],

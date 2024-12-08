@@ -27,78 +27,50 @@
 
 = はじめに
 
-システム制御情報学会研究発表講演会用のTypstテンプレート`lib.typ`は, Typst v0.12での編集を想定し，2024年度のSCI24用のテンプレートを元に，2025年度のSCI25用に改良したものです．
+システム制御情報学会研究発表講演会用のTypstテンプレート`lib.typ`は, Typst v0.12 での編集を想定し，2024年度のSCI24用のテンプレートを元に，2025年度のSCI25用に改良したものです．
 題目，著者名などの書き方の参考例としてお使い下さい．余白や表題，章，本文のスタイルなど一部の書式は設定されていますが，適切に設定されていない書式もあります．
 必要に応じて書式を変更してご利用ください．
 本サンプルは https://github.com/kimushun1101/typst-jp-conf-template を元に作成されており，
-この原稿のソースコードは https://github.com/kimushun1101/typst-jp-conf-template で公開しております．
+この原稿のソースコードは https://github.com/kimushun1101/sci25-typst で公開しております．
 Typst の概要についてお知りになりたい方は，https://github.com/kimushun1101/How-to-use-typst-for-paper-jp にもスライド形式の資料を用意しておりますので，ぜひこちらもご覧ください．
 
-= テンプレートファイルの使い方
-
 テンプレートファイルは以下の２つの方法で実行できることを確認しています．
+README.md に従い，コンパイルできる環境を用意してください．
 + VS Code とその拡張機能を使う．
 + CLI (Command Line Interface) でコンパイルする．
 
-== Visual Studio Code による執筆
-コマンドライン入力を避けたい方は（またそうでない方も） Visual Studio Code (VS Code) の使用をオススメします．
-VS Code とその拡張機能である Tinymist Typst をインストールすれば，環境構築は完了です．このフォルダーをVS Codeで開いてください．編集中においても現在の出力結果を常に確認することができます．
-また，`.vscode/settings.json` にて保存と同時に PDF ファイルが作成される設定にしております．
-
-== Typst CLI によるコンパイル
-他のエディターで執筆したい場合には，そのエディターの拡張機能を使うか，以下の方法で CLI 環境構築とコンパイルを行ってください．
-
-=== インストール
-- Windows の場合\ Windows PowerShell から以下のコマンドでインストールできます．
-```PowerShell
-winget install --id Typst.Typst
-```
-- Mac の場合\ Homebrew を使ってインストールできます．
-```sh
-# Homebrew のインストール
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# Typst のインストール
-brew install typst
-```
-
-- Rust からインストール\ たとえば Ubuntu の場合は，Rust の cargo を使ってインストールする方法が簡単です．
-```sh
-# Rust のインストール
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# Typst のインストール
-cargo install --locked typst-cli 
-```
-
-=== コンパイル
-シェルで対象のディレクトリに移り
-```sh
-typst compile main.typ
-```
-とコマンドすれば main.pdf をコンパイルできます．
-
-== このパッケージが使えない場合
-ビルドができない場合などのトラブルがございましたら，https://github.com/kimushun1101/typst-jp-conf-template/issues でご相談ください．
-
 = 原稿の体裁
 
-原稿の体裁は，https://sci24.iscie.or.jp/info/cfp/page_layout.pdf に従っております．
-
 == レイアウトとフォント
+原稿の体裁は，基本的には https://sci24.iscie.or.jp/info/cfp/page_layout.pdf に従っております．
+
 用紙サイズは A4，余白は上 2.5 cm，下 3 cm，左 1.8 cm，右 1.8 cm とします．
-タイトル，著者，アブストラクトはシングルコラム，本文はダブルコラムです．
+タイトル，著者，アブストラクトは1段組みで，本文は2段組みです．
 アブストラクトは左右に 1 cm 余白を取っています．
 
 フォントの設定は @tab:fonts の通りです．
 ここで，ゴシック体とは "BIZ UDPGothic", "MS PGothic", "Hiragino Kaku Gothic Pro", "IPAexGothic", "Noto Sans CJK JP" のいずれか，明朝体とは "BIZ UDPMincho", "MS PMincho", "Hiragino Mincho Pro", "IPAexMincho", "Noto Serif CJK JP" のいずれかで見つかるものが採用されます．
-これらのフォントがお使いのコンピュータになければインストールするか，代わりに使いたいフォントがあればソースコードの方に追加してください．
-インストールされていないフォントが混ざっているとWarningを出すため，コンパイル自体は問題なく行えますが，気になる方は未インストールのフォントの記述を削除してください．
+これらのフォントがお使いのコンピュータになければインストールするか，代わりに使いたいフォントがあれば`lib.typ`の最初の部分に記載されているソースコードに追加してください．
 以下のコマンドで使用可能なフォント一覧を確認できます．
 ```sh
 typst fonts
 ```
+また，インストールされていないフォントが混ざっているとWarningを出すため，コンパイル自体は問題なく行えますが，気になる方は未インストールのフォントの記述を削除してください．
+```typst
+// Set the Fonts
+#let gothic = ("BIZ UDPGothic", "MS PGothic", "Hiragino Kaku Gothic Pro", "IPAexGothic", "Noto Sans CJK JP")
+#let mincho = ("BIZ UDPMincho", "MS PMincho", "Hiragino Mincho Pro", "IPAexMincho", "Noto Serif CJK JP")
+// example 1: Windows
+// #let gothic = ("MS PGothic")
+// #let mincho = ("MS PMincho")
+// example 2: Mac OS
+// #let gothic = ("Hiragino Kaku Gothic Pro")
+// #let mincho = ("Hiragino Mincho Pro")
+```
+例えば，2, 3 行目をコメントアウトして，5, 6 行目のコメントアウトを外すなど対応していただいても構いません．
 
 #figure(
-  placement: bottom,
+  placement: top,
   caption: [フォントの設定],
   table(
     columns: 3,
@@ -170,6 +142,8 @@ main.typ の文頭にある以下のコードを解説します．
 そのあとに，ソースコードブロックを表示するためのパッケージと定理環境の整備のための外部パッケージの設定を行っており，
 `= はじめに`
 以降の部分が本文となります．
+本文の部分を取り除いたテンプレートとして`main.typ`を用意しました．
+そちらに原稿を執筆いただければと思います．
 
 == 基本的な文法
 章は `=`，節は `==`，小節は `===` で始めます．
@@ -233,7 +207,7 @@ $ u = K_P e + K_I integral_0^t e d t $ <eq:PI-controller>
 @tab:fonts は以下で記述されております．
 ```typ
 #figure(
-  placement: bottom,
+  placement: top,
   caption: [フォントの設定],
   table(
     columns: 3,
@@ -298,19 +272,18 @@ Hayagriva という YAML 形式のフォーマットに従っています．
 == 引用
 引用は "\@label" と記述することで，数式であれば @eq:system，図であれば @fig:quadratic，表であれば @tab:fonts，参考文献であれば @internationaljournal のように表示されます．
 参考文献は連続して引用すると @japanesejournal @internationalconference @japaneseconference @englishbook @japanesebook @sci25webpage と繋げられて表示されます．
-文法上では特に規則はありませんが，個人的にはラベルの命名規則として，図の場合には "fig:" から，表の場合には"tab:" から始めるようにラベル名を設定しており，参考文献のラベルは "著者名発行年タイトルの最初の単語"で名付けております．
+文法上では特に規則はありませんが，ラベルの命名規則の例として，図の場合には "fig:" から，表の場合には"tab:" から始めるようにラベル名を設定しており，識別や検索をしやすくしておくとよいでしょう．
 
 = おわりに
-筆者の理解や表現が誤っている箇所もあるかと思います．
-#link("https://github.com/kimushun1101/typst-jp-conf-template")[GitHub] を通して，Issues や Pull Reqests を歓迎しております．
-日本語での投稿で構いません．
-誤字脱字や文法，表現など細かい修正でも大変ありがたいです．
-筆者は，Typst が普及するためには学会のフォーマットで配布されることが不可欠だと感じています．
-異なる学会のフォーマットも随時 `libs` ディレクトリに追加していこうと思っております．
-これらのファイルがTypst が普及の一助となれば幸いです．
+SCI25 の Typst を作成させていただきました．
+まだ至らぬ部分も多々あるかと思います．
+#link("https://github.com/kimushun1101/typst-jp-conf-template")[GitHub] には，他の学会のテンプレートも保管しております．
+不具合や不明点がありましたら，Issues や Pull Reqests へご報告いただけますと幸いです．
+誤字脱字や文法，表現など細かい修正でも大変ありがたいです．日本語での投稿でも構いません．
+GitHubのハードルが高ければ，製作者 #link("mailto:kimushun1101@gmail.com") へ直接ご連絡いただいても喜びます．
+皆様とご協力させていただき Typst 普及の一助となれば幸いです．
 
 = 謝辞
 謝辞には章番号が振られないように設定しております．
-「この研究は☆☆☆の助成を受けて行われました．」や「〇〇〇大学との共同研究です．」
-みたいな文章が書かれることを想定しています．
+「この研究は☆☆☆の助成を受けて行われました．」や「〇〇〇大学との共同研究です．」などの文章が書かれることを想定しています．
 

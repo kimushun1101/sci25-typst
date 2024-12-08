@@ -1,30 +1,29 @@
-![Deploy workflow](https://github.com/kimushun1101/typst-jp-conf-template/actions/workflows/release.yml/badge.svg)
-![Deploy workflow](https://github.com/kimushun1101/typst-jp-conf-template/actions/workflows/gh-pages.yml/badge.svg)
+![Compile workflow](https://github.com/kimushun1101/sci25-typst/actions/workflows/compile.yml/badge.svg)
+![Deploy workflow](https://github.com/kimushun1101/sci25-typst/actions/workflows/release.yml/badge.svg)
 
-# typst-jp-conf-template
+# sci25-typst
 
 **このソースコードはTypst version 0.12で作成しました．**  
-Typst で日本語論文を書くときのテンプレートです．
-Typst の概要について知りたい方は，https://github.com/kimushun1101/How-to-use-typst-for-paper-jp をご覧ください．
-
+[第69回 システム制御情報学会 研究発表講演会](https://sci25.iscie.or.jp/)の原稿を Typst で書くときのテンプレートです．  
+Typst の概要については https://typst.app/docs/tutorial/writing-in-typst/ をご覧ください．  
 
 [vscode-typst.webm](https://github.com/kimushun1101/typst-jp-conf-template/assets/13430937/f227b85b-0266-417b-a24a-54f28f9a71b8)
 
 
-| ファイル  | 意味                    |
-| -------- | ----------------------- |
-| main.typ | 原稿の Typst ソースコード |
-| refs.*   | 参考文献ファイル          |
+| ファイル     | 意味                           |
+| ---------- | ------------------------------ |
+| main.typ   | 原稿雛形の Typst ソースコード      |
+| sample.typ | サンプルの Typst ソースコード      |
+| lib.typ    | 体裁を整える Typst ソースコード    |
+| sci.csl    | 参考文献の体裁を整える CSL ファイル |
+| refs.*     | 参考文献ファイル                  |
 
 
-| ディレクトリ | 含まれるファイルの種類          |
+| ディレクトリ    | 含まれるファイルの種類          |
 | ------------- | --------------------------- |
-| figs          | 論文に使用する画像ファイル    |
-| libs          | 体裁を整えるライブラリファイル |
+| figs          | 論文に使用する画像ファイル      |
+| .vscode       | VS Code用の設定ファイル       |
 
-
-雰囲気を掴みたい場合には [こちらの Typst Web Application](https://typst.app/project/wXmeFlJ5bhx1awSRuJRiUf) をお試しください．  
-コンパイル済みの資料を確認したいだけでしたら [こちらの GitHub Pages](https://kimushun1101.github.io/typst-jp-conf-template/typst-jp-conf.pdf) からお読みできます．
 
 ## 使用方法
 GitHub に慣れていない方は，GitHub ページの `<>Code▼` から `Download ZIP` して展開してください．  
@@ -36,21 +35,39 @@ GitHub に慣れていない方は，GitHub ページの `<>Code▼` から `Dow
 3. 推奨拡張機能をインストール．  
   Extensions (`Ctrl` + `Shift` + `X`) の `Search Extensions in Marketplace` のテキストボックスに `@recommended` と入力すると表示される，以下の拡張機能をinstall をクリック．  
     - [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist)
-4. Explorer (`Ctrl` + `Shift` + `E`) から `main.typ` を開いた状態で，画面右上にある Typst Preview の方の ![view-icon](https://github.com/kimushun1101/typst-jp-conf-template/assets/13430937/a44c52cb-d23a-4fdb-ac9f-dc2b47deb40a) アイコンをクリック (
- `Ctrl` + `K` のあと `V`) でプレビューを表示．[トップにある動画](#typst-jp-conf-template) の操作です．
+4. Explorer (`Ctrl` + `Shift` + `E`) から `sample.typ` を開いた状態で，画面右上にある Typst Preview の方の ![view-icon](https://github.com/kimushun1101/typst-jp-conf-template/assets/13430937/a44c52cb-d23a-4fdb-ac9f-dc2b47deb40a) アイコンをクリック (
+ `Ctrl` + `K` のあと `V`) でプレビューを表示．[トップにある動画](#sci25-typst) の操作です．
 5. `Ctrl` + `S` で PDF を生成．
 
 ### 他のエディターで執筆する場合
 
 筆者は試せていませんが，他のエディターでも同様の拡張機能はありそうです．  
 また，Typst のインストールおよびコンパイルはコマンドラインでも行えます．  
-お使いの OS によってインストール方法が異なるため，詳細は[別ページ](docs/native-install.md)にまとめました．
+インストール方法は OS ごとに異なります．
+- Windows
+  PowerShell を開き以下のコマンドを入力する．
+  ```powershell
+  winget install --id Typst.Typst
+  ```
+  `winget` コマンドが有効でない場合には，Microsoft Store から [アプリインストーラー](https://apps.microsoft.com/detail/9nblggh4nns1) をインストールすると使えるようになります．
+- Mac
+  [Homebrew](https://brew.sh/ja/) を導入して，以下のコマンドを入力する．
+  ```sh
+  brew install typst
+  ```
+- Rust を通してインストール
+  Ubuntu の場合などはこの方法をオススメします．
+  [Rust](https://www.rust-lang.org/ja/tools/install) をインストールして，以下のコマンドを入力する．
+  ```sh
+  cargo install --locked typst-cli
+  ```
 
-## 参考元
-- (unofficial) IFAC Conference Template for Typst : https://github.com/typst/packages/tree/main/packages/preview/abiding-ifacconf/0.1.0
-- charged-ieee : https://github.com/typst/packages/tree/main/packages/preview/charged-ieee/0.1.0
-- IEEE style as per the 2021 guidelines, V 01.29.2021. : https://editor.citationstyles.org/styleInfo/?styleId=http%3A%2F%2Fwww.zotero.org%2Fstyles%2Fieee
-- GitHub Pages へのデプロイ : https://github.com/yukukotani/typst-coins-thesis
+コマンドによるコンパイル手順は以下のとおりです．
+1. [Typst](https://typst.app/) をインストール．
+2. PowerShell やターミナルで `sample.typ` のあるディレクトリに移り，以下のコマンドで `sample.pdf` を生成．
+   ```
+   typst compile sample.typ
+   ```
 
 ## ライセンス
 参考元にならってライセンスを付与しています．  

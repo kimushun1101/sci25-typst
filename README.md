@@ -32,7 +32,7 @@ Typst の概要については [Typstで執筆するには](https://typst-jp.git
 ## 使用方法
 GitHub に慣れていない方は，[GitHub Releaseから最新版のzipファイル](https://github.com/kimushun1101/sci25-typst/releases/latest/download/typst-sci.zip)をダウンロードして展開してください．  
 慣れている方は，`git clone` したり `use this template` したり，適宜扱ってください．  
-もし不具合や修正提案などありましたら，GitHub の [Issues](https://github.com/kimushun1101/sci25-typst/issues) や [Pull request](https://github.com/kimushun1101/sci25-typst/pulls) をご活用ください．
+もし不具合や修正提案などありましたら，GitHub の [Issues](https://github.com/kimushun1101/sci25-typst/issues) や [Pull requests](https://github.com/kimushun1101/sci25-typst/pulls) などをご活用ください．
 
 ### VS Code の場合
 1. [VS Code](https://code.visualstudio.com/) をインストール．

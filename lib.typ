@@ -29,7 +29,7 @@
     paper: "a4",
     margin: (top: 2.5cm, bottom: 3cm, x: 1.8cm)
   )
-  set text(size: 10.5pt, font: mincho)
+  set text(size: 10.5pt, lang: "jp", font: mincho)
   // show regex("[0-9a-zA-Z]"): set text(font: "New Computer Modern Math")
   set par(leading: 0.55em, first-line-indent: 1em, justify: true, spacing: 0.55em)
 

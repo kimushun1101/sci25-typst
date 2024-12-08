@@ -6,7 +6,8 @@
 
 **このソースコードはTypst version 0.12で作成しました．**  
 [第69回 システム制御情報学会 研究発表講演会](https://sci25.iscie.or.jp/)の原稿を Typst で書くときのテンプレートです．  
-Typst の概要については https://typst.app/docs/tutorial/writing-in-typst/ をご覧ください．  
+コンパイルしたサンプルは [sample.pdf](https://kimushun1101.github.io/sci25-typst/sample.pdf) で確認できます．  
+Typst の概要については [Typstで執筆するには](https://typst-jp.github.io/docs/tutorial/writing-in-typst/) をご覧ください．  
 
 [vscode-typst.webm](https://github.com/kimushun1101/typst-jp-conf-template/assets/13430937/f227b85b-0266-417b-a24a-54f28f9a71b8)
 

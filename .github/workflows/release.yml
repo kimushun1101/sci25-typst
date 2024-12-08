@@ -13,7 +13,7 @@ jobs:
       - name: Make zip file
         run: |
           mkdir -p typst-sci/figs
-          cp -r --parents sample.typ main.typ README.md LICENSE sci.csl refs.bib refs.yml .vscode figs typst-sci
+          cp -r --parents sample.typ main.typ lib.typ README.md LICENSE sci.csl refs.bib refs.yml .vscode figs typst-sci
           zip -r typst-sci.zip typst-sci
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
